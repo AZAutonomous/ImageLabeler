@@ -7,7 +7,11 @@
     <x>0</x>
     <y>0</y>
     <width>912</width>
+<<<<<<< HEAD
+    <height>833</height>
+=======
     <height>797</height>
+>>>>>>> 5784a4fdf9e154f445b71734d42f5ca56fae81da
    </rect>
   </property>
   <property name="sizePolicy">
@@ -25,6 +29,19 @@
    </property>
    <layout class="QVBoxLayout" name="verticalLayout_2">
     <item>
+<<<<<<< HEAD
+     <widget class="QLineEdit" name="lineEdit"/>
+    </item>
+    <item>
+     <widget class="QPushButton" name="directoryButton">
+      <property name="text">
+       <string>Set Directory</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+=======
+>>>>>>> 5784a4fdf9e154f445b71734d42f5ca56fae81da
      <widget class="QFrame" name="imageBox">
       <property name="sizePolicy">
        <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
@@ -113,6 +130,15 @@
            <property name="alignment">
             <set>Qt::AlignCenter</set>
            </property>
+<<<<<<< HEAD
+           <property name="checkable">
+            <bool>false</bool>
+           </property>
+           <property name="checked">
+            <bool>false</bool>
+           </property>
+=======
+>>>>>>> 5784a4fdf9e154f445b71734d42f5ca56fae81da
            <layout class="QGridLayout" name="gridLayout_3">
             <property name="sizeConstraint">
              <enum>QLayout::SetDefaultConstraint</enum>
@@ -215,6 +241,8 @@
               </attribute>
              </widget>
             </item>
+<<<<<<< HEAD
+=======
             <item row="0" column="0">
              <widget class="QPushButton" name="circle">
               <property name="sizePolicy">
@@ -234,6 +262,7 @@
               </attribute>
              </widget>
             </item>
+>>>>>>> 5784a4fdf9e154f445b71734d42f5ca56fae81da
             <item row="1" column="5">
              <widget class="QPushButton" name="cross">
               <property name="sizePolicy">
@@ -367,7 +396,43 @@
               </attribute>
              </widget>
             </item>
+<<<<<<< HEAD
+            <item row="0" column="0">
+             <widget class="QPushButton" name="circle">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Minimum" vsizetype="MinimumExpanding">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="text">
+               <string>Circle</string>
+              </property>
+              <property name="checkable">
+               <bool>true</bool>
+              </property>
+              <attribute name="buttonGroup">
+               <string notr="true">shapeButtons</string>
+              </attribute>
+             </widget>
+            </item>
            </layout>
+           <zorder>square</zorder>
+           <zorder>octagon</zorder>
+           <zorder>star</zorder>
+           <zorder>trapezoid</zorder>
+           <zorder>hexagon</zorder>
+           <zorder>semicircle</zorder>
+           <zorder>circle</zorder>
+           <zorder>cross</zorder>
+           <zorder>pentagon</zorder>
+           <zorder>triangle</zorder>
+           <zorder>quartercircle</zorder>
+           <zorder>rectangle</zorder>
+           <zorder>heptagon</zorder>
+=======
+           </layout>
+>>>>>>> 5784a4fdf9e154f445b71734d42f5ca56fae81da
           </widget>
          </item>
          <item>
@@ -502,6 +567,15 @@
          <property name="alignment">
           <set>Qt::AlignCenter</set>
          </property>
+<<<<<<< HEAD
+         <property name="checkable">
+          <bool>false</bool>
+         </property>
+         <property name="checked">
+          <bool>false</bool>
+         </property>
+=======
+>>>>>>> 5784a4fdf9e154f445b71734d42f5ca56fae81da
          <layout class="QHBoxLayout" name="horizontalLayout_5">
           <property name="spacing">
            <number>0</number>
@@ -650,6 +724,12 @@
          <property name="alignment">
           <set>Qt::AlignCenter</set>
          </property>
+<<<<<<< HEAD
+         <property name="checkable">
+          <bool>false</bool>
+         </property>
+=======
+>>>>>>> 5784a4fdf9e154f445b71734d42f5ca56fae81da
          <layout class="QGridLayout" name="gridLayout_2">
           <property name="sizeConstraint">
            <enum>QLayout::SetDefaultConstraint</enum>
@@ -1145,6 +1225,12 @@
          <property name="alignment">
           <set>Qt::AlignCenter</set>
          </property>
+<<<<<<< HEAD
+         <property name="checkable">
+          <bool>false</bool>
+         </property>
+=======
+>>>>>>> 5784a4fdf9e154f445b71734d42f5ca56fae81da
          <layout class="QHBoxLayout" name="horizontalLayout_7">
           <property name="spacing">
            <number>0</number>
@@ -1409,10 +1495,17 @@
  <resources/>
  <connections/>
  <buttongroups>
+<<<<<<< HEAD
+  <buttongroup name="shapeButtons"/>
+  <buttongroup name="dirButtons"/>
+  <buttongroup name="letterColorButtons"/>
+  <buttongroup name="colorButtons"/>
+=======
   <buttongroup name="colorButtons"/>
   <buttongroup name="dirButtons"/>
   <buttongroup name="letterColorButtons"/>
   <buttongroup name="shapeButtons"/>
+>>>>>>> 5784a4fdf9e154f445b71734d42f5ca56fae81da
   <buttongroup name="letterButtons"/>
  </buttongroups>
 </ui>
