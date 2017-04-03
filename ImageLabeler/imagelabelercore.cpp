@@ -1,35 +1,25 @@
 #include "imagelabelercore.h"
 #include <QApplication>
 #include "imagelabelergui.h"
-<<<<<<< HEAD
+
 #include <QFile>
 #include <QTextStream>
-=======
->>>>>>> 5784a4fdf9e154f445b71734d42f5ca56fae81da
+#include <QFileInfo>
 
 #define DEBUG
 
 #ifdef DEBUG
 #include <QDebug>
 #endif // QDebug
-<<<<<<< HEAD
+
 class ImageData;
-=======
->>>>>>> 5784a4fdf9e154f445b71734d42f5ca56fae81da
 
 ImageLabeler::ImageLabeler(int argc, char **argv) :
 	app(new QApplication(argc, argv)),
 	gui(new ImageLabelerGUI(this)),
 	dirIter(nullptr),
 	rootDirectory(""),
-<<<<<<< HEAD
-    imageFormat(""),
-    imageNumber(1),
-    rootDirectoryName("")
-
-=======
 	imageFormat("")
->>>>>>> 5784a4fdf9e154f445b71734d42f5ca56fae81da
 {
 #ifdef DEBUG
 	qDebug() << "Constructor finished";
@@ -43,11 +33,9 @@ ImageLabeler::~ImageLabeler()
 	delete app;
 }
 
-<<<<<<< HEAD
+
 int ImageLabeler::run()
-=======
-ImageLabeler::run()
->>>>>>> 5784a4fdf9e154f445b71734d42f5ca56fae81da
+
 {
 	gui->show();
 	return app->exec();
@@ -69,7 +57,7 @@ bool ImageLabeler::loadNext()
 		// Update GUI
 		gui->setFilepath(filepath);
 		gui->setImage(filepath);
-//		gui->resetButtons(); // TODO
+        gui->resetButtons();
 		return true;
 	}
 
@@ -77,19 +65,27 @@ bool ImageLabeler::loadNext()
 		// Update GUI
 		gui->setFilepath("No images found");
 		gui->setImage(""); // Directory of some placeholder image
-//		gui->disableButtons(); // TODO
+        gui->resetButtons();
 		return false;
 	}
 }
 
 
-void ImageLabeler::setRootDirectory(const QString& dir)
+void ImageLabeler::setRootDirectory(QString dir)
 {
+	// Validate directory
+	if (!dir.isEmpty() && dir.right(1) != "/") {
+		dir.append('/'); // Add trailing '/'
+#ifdef DEBUG
+	qDebug() << "Adjusted directory name to" << dir;
+#endif
+	}
+
+	// Update GUI
+	gui->setRootDirectory(dir);
+
 	rootDirectory = QDir(dir);
-<<<<<<< HEAD
-    rootDirectoryName = dir;
-=======
->>>>>>> 5784a4fdf9e154f445b71734d42f5ca56fae81da
+
 	loadIter();
 
 #ifdef DEBUG
@@ -102,8 +98,16 @@ void ImageLabeler::setRootDirectory(const QString& dir)
 #endif // DEBUG
 }
 
-void ImageLabeler::setImageFormat(const QString &format)
+void ImageLabeler::setImageFormat(QString format)
 {
+	// Validate input
+	if (!format.isEmpty() && format.lastIndexOf(".") != -1) {
+		format = format.section(".", -1); // Extract file extension
+#ifdef DEBUG
+	qDebug() << "Adjusted file extension to" << format;
+#endif
+	}
+
 	imageFormat = format;
 }
 
@@ -113,45 +117,86 @@ void ImageLabeler::loadIter()
 		delete dirIter;
 	dirIter = new WrappingQDirIterator(rootDirectory.absolutePath(), QStringList() << "*." + imageFormat, QDir::Files, QDirIterator::NoIteratorFlags);
 }
-<<<<<<< HEAD
-void ImageLabeler::moveToProcessedDir(){ //move process images to seperate directory and rename to correspond with its JSON
-    QDir d = QDir(dirIter->filePath());
-    QString currNum = QString::fromStdString(std::to_string(imageNumber));
-    d.rename(dirIter->filePath(), rootDirectoryName + "/Processed/" + dirIter->fileName());
 
+void ImageLabeler::moveToSubdir(QString subdir){ //move process images to seperate directory and rename to correspond with its JSON
+	// Validate subdir
+	if (!subdir.isEmpty() && subdir.right(1) != "/") {
+		subdir.append('/'); // Add trailing '/'
+	}
+
+    QDir d = QDir(dirIter->filePath());
+    //QString currNum = QString::fromStdString(std::to_string(imageNumber));
+	d.rename(dirIter->filePath(), rootDirectory.absolutePath() + subdir + dirIter->fileName());
+
+#ifdef DEBUG
+	qDebug() << dirIter->filePath() + " moved to " + rootDirectory.absolutePath() + subdir + dirIter->fileName();
+#endif // DEBUG
 }
 
-void ImageLabeler::saveData(ImageData currImage) //outputs data to file in JSON format
+// Creates a subdirectory, incrementing suffix to avoid filename collisions. Returns created filepath
+// Example: createSubdirectory("processed_", "img_001.jpg")
+QString ImageLabeler::createSubdir(const QString &subdir_root, const QString &filename) {  //creates processed directory as necessary
+    int i = 0;
+	QString subdir = subdir_root + QString::number(i) + "/";
+	QFile *file = new QFile(rootDirectory.absolutePath() + subdir + filename);
+
+	qDebug() << rootDirectory.absolutePath() + subdir + filename << "exists:" << file->exists();
+
+	// Search until no duplicate file names/paths
+	while (file->exists()) {
+		++i;
+		subdir = subdir_root + QString::number(i) + "/";
+		delete file; // Delete old memory
+		file = new QFile(subdir + filename);
+	}
+
+	// Make subdirectory
+	this->rootDirectory.mkdir(subdir);
+	qDebug() << "Created: " + subdir;
+
+	// Clear memory
+	delete file;
+
+	// Return created subdirectory
+	return subdir;
+}
+
+void ImageLabeler::saveData(ImageData currImage, QString subdir) //outputs data to file in JSON format
 {
-    QString line;
-    QString currNum = QString::fromStdString(std::to_string(imageNumber)); //"unique"
-    ++imageNumber;
-    QFile file ( rootDirectoryName + "/Processed/" + currNum + ".txt" );  //FIX: hardcoded directory for JSON.
+	// Validate subdir
+	if (!subdir.isEmpty() && subdir.right(1) != "/") {
+		subdir.append('/'); // Add trailing '/'
+	}
 
-    line.append("{\n\t\"image\": ");
-    line.append(rootDirectoryName + "/Processed/" + dirIter->fileName());
-    line.append("\n\t\"shape\": \"");
-    line.append( currImage.shape );
-    line.append( "\",\n");
-    line.append("\t\"shapeColor\": \"");
-    line.append( currImage.shapeColor );
-    line.append( "\",\n");
-    line.append("\t\"letter\": \"");
-    line.append( currImage.letter );
-    line.append( "\",\n");
-    line.append("\t\"letterColor\": \"");
-    line.append( currImage.letterColor );
-    line.append( "\",\n");
-    line.append("\t\"orientation\": \"");
-    line.append( currImage.orientation );
-    line.append( "\",\n}");
+	QString contents;
+	QFile file ( rootDirectory.absolutePath() + subdir + dirIter->fileInfo().baseName() + ".json" );
 
-    if ( file.open( QIODevice::ReadWrite) )
-    {
-    QTextStream stream( &file );
-    stream << line << endl;
-    file.close();
+	contents.append("{\n\t\"image\": ");
+	contents.append("\"" + dirIter->fileName() + "\",");
+	contents.append("\n\t\"shape\": \"");
+	contents.append( currImage.shape );
+	contents.append( "\",\n");
+	contents.append("\t\"shapeColor\": \"");
+	contents.append( currImage.shapeColor );
+	contents.append( "\",\n");
+	contents.append("\t\"letter\": \"");
+	contents.append( currImage.letter );
+	contents.append( "\",\n");
+	contents.append("\t\"letterColor\": \"");
+	contents.append( currImage.letterColor );
+	contents.append( "\",\n");
+	contents.append("\t\"orientation\": \"");
+	contents.append( currImage.orientation );
+	contents.append( "\"\n}");
+
+	if ( file.open(QIODevice::WriteOnly) ) {
+		QTextStream stream( &file );
+		stream << contents;
+		file.close();
     }
 }
-=======
->>>>>>> 5784a4fdf9e154f445b71734d42f5ca56fae81da
+
+QString ImageLabeler::getCurrFilename() {
+	return dirIter->fileName();
+}
+

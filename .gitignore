@@ -35,6 +35,8 @@ Makefile*
 
 # QtCtreator CMake
 CMakeLists.txt.user*
+<<<<<<< HEAD
 
 # Macs suck
 .DS_STORE
+__MACOSX/

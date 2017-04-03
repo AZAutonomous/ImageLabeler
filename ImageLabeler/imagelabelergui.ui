@@ -6,12 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>912</width>
-<<<<<<< HEAD
-    <height>833</height>
-=======
-    <height>797</height>
->>>>>>> 5784a4fdf9e154f445b71734d42f5ca56fae81da
+    <width>1009</width>
+    <height>860</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -29,8 +25,7 @@
    </property>
    <layout class="QVBoxLayout" name="verticalLayout_2">
     <item>
-<<<<<<< HEAD
-     <widget class="QLineEdit" name="lineEdit"/>
+     <widget class="QLineEdit" name="rootDirField"/>
     </item>
     <item>
      <widget class="QPushButton" name="directoryButton">
@@ -40,8 +35,6 @@
      </widget>
     </item>
     <item>
-=======
->>>>>>> 5784a4fdf9e154f445b71734d42f5ca56fae81da
      <widget class="QFrame" name="imageBox">
       <property name="sizePolicy">
        <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
@@ -130,15 +123,12 @@
            <property name="alignment">
             <set>Qt::AlignCenter</set>
            </property>
-<<<<<<< HEAD
            <property name="checkable">
             <bool>false</bool>
            </property>
            <property name="checked">
             <bool>false</bool>
            </property>
-=======
->>>>>>> 5784a4fdf9e154f445b71734d42f5ca56fae81da
            <layout class="QGridLayout" name="gridLayout_3">
             <property name="sizeConstraint">
              <enum>QLayout::SetDefaultConstraint</enum>
@@ -241,8 +231,6 @@
               </attribute>
              </widget>
             </item>
-<<<<<<< HEAD
-=======
             <item row="0" column="0">
              <widget class="QPushButton" name="circle">
               <property name="sizePolicy">
@@ -262,7 +250,6 @@
               </attribute>
              </widget>
             </item>
->>>>>>> 5784a4fdf9e154f445b71734d42f5ca56fae81da
             <item row="1" column="5">
              <widget class="QPushButton" name="cross">
               <property name="sizePolicy">
@@ -396,43 +383,7 @@
               </attribute>
              </widget>
             </item>
-<<<<<<< HEAD
-            <item row="0" column="0">
-             <widget class="QPushButton" name="circle">
-              <property name="sizePolicy">
-               <sizepolicy hsizetype="Minimum" vsizetype="MinimumExpanding">
-                <horstretch>0</horstretch>
-                <verstretch>0</verstretch>
-               </sizepolicy>
-              </property>
-              <property name="text">
-               <string>Circle</string>
-              </property>
-              <property name="checkable">
-               <bool>true</bool>
-              </property>
-              <attribute name="buttonGroup">
-               <string notr="true">shapeButtons</string>
-              </attribute>
-             </widget>
-            </item>
            </layout>
-           <zorder>square</zorder>
-           <zorder>octagon</zorder>
-           <zorder>star</zorder>
-           <zorder>trapezoid</zorder>
-           <zorder>hexagon</zorder>
-           <zorder>semicircle</zorder>
-           <zorder>circle</zorder>
-           <zorder>cross</zorder>
-           <zorder>pentagon</zorder>
-           <zorder>triangle</zorder>
-           <zorder>quartercircle</zorder>
-           <zorder>rectangle</zorder>
-           <zorder>heptagon</zorder>
-=======
-           </layout>
->>>>>>> 5784a4fdf9e154f445b71734d42f5ca56fae81da
           </widget>
          </item>
          <item>
@@ -450,98 +401,7 @@
             <property name="spacing">
              <number>0</number>
             </property>
-            <item row="2" column="0">
-             <widget class="QPushButton" name="SW">
-              <property name="text">
-               <string>SW</string>
-              </property>
-              <property name="checkable">
-               <bool>true</bool>
-              </property>
-              <attribute name="buttonGroup">
-               <string notr="true">dirButtons</string>
-              </attribute>
-             </widget>
-            </item>
-            <item row="2" column="1">
-             <widget class="QPushButton" name="S">
-              <property name="text">
-               <string>S</string>
-              </property>
-              <property name="checkable">
-               <bool>true</bool>
-              </property>
-              <attribute name="buttonGroup">
-               <string notr="true">dirButtons</string>
-              </attribute>
-             </widget>
-            </item>
-            <item row="2" column="2">
-             <widget class="QPushButton" name="SE">
-              <property name="text">
-               <string>SE</string>
-              </property>
-              <property name="checkable">
-               <bool>true</bool>
-              </property>
-              <attribute name="buttonGroup">
-               <string notr="true">dirButtons</string>
-              </attribute>
-             </widget>
-            </item>
             <item row="1" column="0">
-             <widget class="QPushButton" name="W">
-              <property name="text">
-               <string>W</string>
-              </property>
-              <property name="checkable">
-               <bool>true</bool>
-              </property>
-              <attribute name="buttonGroup">
-               <string notr="true">dirButtons</string>
-              </attribute>
-             </widget>
-            </item>
-            <item row="1" column="2">
-             <widget class="QPushButton" name="E">
-              <property name="text">
-               <string>E</string>
-              </property>
-              <property name="checkable">
-               <bool>true</bool>
-              </property>
-              <attribute name="buttonGroup">
-               <string notr="true">dirButtons</string>
-              </attribute>
-             </widget>
-            </item>
-            <item row="0" column="1">
-             <widget class="QPushButton" name="N">
-              <property name="text">
-               <string>N</string>
-              </property>
-              <property name="checkable">
-               <bool>true</bool>
-              </property>
-              <attribute name="buttonGroup">
-               <string notr="true">dirButtons</string>
-              </attribute>
-             </widget>
-            </item>
-            <item row="0" column="2">
-             <widget class="QPushButton" name="NE">
-              <property name="text">
-               <string>NE</string>
-              </property>
-              <property name="checkable">
-               <bool>true</bool>
-              </property>
-              <attribute name="buttonGroup">
-               <string notr="true">dirButtons</string>
-              </attribute>
-             </widget>
-            </item>
-            <item row="0" column="0">
              <widget class="QPushButton" name="NW">
               <property name="text">
                <string>NW</string>
@@ -554,7 +414,138 @@
               </attribute>
              </widget>
             </item>
+            <item row="1" column="2">
+             <widget class="QPushButton" name="NE">
+              <property name="enabled">
+               <bool>true</bool>
+              </property>
+              <property name="text">
+               <string>NE</string>
+              </property>
+              <property name="checkable">
+               <bool>true</bool>
+              </property>
+              <attribute name="buttonGroup">
+               <string notr="true">dirButtons</string>
+              </attribute>
+             </widget>
+            </item>
+            <item row="1" column="1">
+             <widget class="QPushButton" name="N">
+              <property name="text">
+               <string>N</string>
+              </property>
+              <property name="checkable">
+               <bool>true</bool>
+              </property>
+              <attribute name="buttonGroup">
+               <string notr="true">dirButtons</string>
+              </attribute>
+             </widget>
+            </item>
+            <item row="2" column="2">
+             <widget class="QPushButton" name="E">
+              <property name="text">
+               <string>E</string>
+              </property>
+              <property name="checkable">
+               <bool>true</bool>
+              </property>
+              <attribute name="buttonGroup">
+               <string notr="true">dirButtons</string>
+              </attribute>
+             </widget>
+            </item>
+            <item row="2" column="0">
+             <widget class="QPushButton" name="W">
+              <property name="text">
+               <string>W</string>
+              </property>
+              <property name="checkable">
+               <bool>true</bool>
+              </property>
+              <attribute name="buttonGroup">
+               <string notr="true">dirButtons</string>
+              </attribute>
+             </widget>
+            </item>
+            <item row="3" column="2">
+             <widget class="QPushButton" name="SE">
+              <property name="text">
+               <string>SE</string>
+              </property>
+              <property name="checkable">
+               <bool>true</bool>
+              </property>
+              <attribute name="buttonGroup">
+               <string notr="true">dirButtons</string>
+              </attribute>
+             </widget>
+            </item>
+            <item row="3" column="1">
+             <widget class="QPushButton" name="S">
+              <property name="text">
+               <string>S</string>
+              </property>
+              <property name="checkable">
+               <bool>true</bool>
+              </property>
+              <attribute name="buttonGroup">
+               <string notr="true">dirButtons</string>
+              </attribute>
+             </widget>
+            </item>
+            <item row="3" column="0">
+             <widget class="QPushButton" name="SW">
+              <property name="text">
+               <string>SW</string>
+              </property>
+              <property name="checkable">
+               <bool>true</bool>
+              </property>
+              <attribute name="buttonGroup">
+               <string notr="true">dirButtons</string>
+              </attribute>
+             </widget>
+            </item>
            </layout>
+          </widget>
+         </item>
+         <item>
+          <widget class="QToolButton" name="notTarget">
+           <property name="enabled">
+            <bool>true</bool>
+           </property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>90</width>
+             <height>90</height>
+            </size>
+           </property>
+           <property name="autoFillBackground">
+            <bool>false</bool>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">selection-background-color: rgb(252, 0, 6);</string>
+           </property>
+           <property name="text">
+            <string>Not a Target</string>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>20</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
           </widget>
          </item>
         </layout>
@@ -567,15 +558,12 @@
          <property name="alignment">
           <set>Qt::AlignCenter</set>
          </property>
-<<<<<<< HEAD
          <property name="checkable">
           <bool>false</bool>
          </property>
          <property name="checked">
           <bool>false</bool>
          </property>
-=======
->>>>>>> 5784a4fdf9e154f445b71734d42f5ca56fae81da
          <layout class="QHBoxLayout" name="horizontalLayout_5">
           <property name="spacing">
            <number>0</number>
@@ -724,12 +712,9 @@
          <property name="alignment">
           <set>Qt::AlignCenter</set>
          </property>
-<<<<<<< HEAD
          <property name="checkable">
           <bool>false</bool>
          </property>
-=======
->>>>>>> 5784a4fdf9e154f445b71734d42f5ca56fae81da
          <layout class="QGridLayout" name="gridLayout_2">
           <property name="sizeConstraint">
            <enum>QLayout::SetDefaultConstraint</enum>
@@ -867,10 +852,10 @@
             </attribute>
            </widget>
           </item>
-          <item row="0" column="10">
-           <widget class="QPushButton" name="h">
+          <item row="0" column="11">
+           <widget class="QPushButton" name="i">
             <property name="text">
-             <string>H</string>
+             <string>I</string>
             </property>
             <property name="checkable">
              <bool>true</bool>
@@ -880,10 +865,10 @@
             </attribute>
            </widget>
           </item>
-          <item row="0" column="11">
-           <widget class="QPushButton" name="i">
+          <item row="0" column="10">
+           <widget class="QPushButton" name="h">
             <property name="text">
-             <string>I</string>
+             <string>H</string>
             </property>
             <property name="checkable">
              <bool>true</bool>
@@ -945,10 +930,10 @@
             </attribute>
            </widget>
           </item>
-          <item row="3" column="7">
-           <widget class="QPushButton" name="four">
+          <item row="3" column="9">
+           <widget class="QPushButton" name="six">
             <property name="text">
-             <string>4</string>
+             <string>6</string>
             </property>
             <property name="checkable">
              <bool>true</bool>
@@ -958,10 +943,10 @@
             </attribute>
            </widget>
           </item>
-          <item row="3" column="9">
-           <widget class="QPushButton" name="six">
+          <item row="3" column="7">
+           <widget class="QPushButton" name="four">
             <property name="text">
-             <string>6</string>
+             <string>4</string>
             </property>
             <property name="checkable">
              <bool>true</bool>
@@ -1162,10 +1147,10 @@
             </attribute>
            </widget>
           </item>
-          <item row="1" column="11">
-           <widget class="QPushButton" name="s">
+          <item row="1" column="13">
+           <widget class="QPushButton" name="t">
             <property name="text">
-             <string>S</string>
+             <string>T</string>
             </property>
             <property name="checkable">
              <bool>true</bool>
@@ -1175,10 +1160,10 @@
             </attribute>
            </widget>
           </item>
-          <item row="1" column="13">
-           <widget class="QPushButton" name="t">
+          <item row="1" column="11">
+           <widget class="QPushButton" name="s">
             <property name="text">
-             <string>T</string>
+             <string>S</string>
             </property>
             <property name="checkable">
              <bool>true</bool>
@@ -1225,12 +1210,9 @@
          <property name="alignment">
           <set>Qt::AlignCenter</set>
          </property>
-<<<<<<< HEAD
          <property name="checkable">
           <bool>false</bool>
          </property>
-=======
->>>>>>> 5784a4fdf9e154f445b71734d42f5ca56fae81da
          <layout class="QHBoxLayout" name="horizontalLayout_7">
           <property name="spacing">
            <number>0</number>
@@ -1495,17 +1477,10 @@
  <resources/>
  <connections/>
  <buttongroups>
-<<<<<<< HEAD
-  <buttongroup name="shapeButtons"/>
-  <buttongroup name="dirButtons"/>
-  <buttongroup name="letterColorButtons"/>
   <buttongroup name="colorButtons"/>
-=======
-  <buttongroup name="colorButtons"/>
-  <buttongroup name="dirButtons"/>
-  <buttongroup name="letterColorButtons"/>
-  <buttongroup name="shapeButtons"/>
->>>>>>> 5784a4fdf9e154f445b71734d42f5ca56fae81da
   <buttongroup name="letterButtons"/>
+  <buttongroup name="shapeButtons"/>
+  <buttongroup name="letterColorButtons"/>
+  <buttongroup name="dirButtons"/>
  </buttongroups>
 </ui>

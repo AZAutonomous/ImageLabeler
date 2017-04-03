@@ -12,10 +12,8 @@ class ImageLabelerGUI;
 
 // Forward declaration
 class ImageLabeler;
-<<<<<<< HEAD
+
 class ImageData;
-=======
->>>>>>> 5784a4fdf9e154f445b71734d42f5ca56fae81da
 
 class ImageLabelerGUI : public QMainWindow
 {
@@ -25,12 +23,15 @@ public:
 	explicit ImageLabelerGUI(ImageLabeler *core, QMainWindow *parent = 0);
 	~ImageLabelerGUI();
 
+	void setRootDirectory(const QString &str);
 	void setFilepath(const QString &str);
 	void setImage(const QString &str);
 	void setComment(const QString &str);
+    void resetButtons();
+    void disableButtons();
 
 private slots:
-<<<<<<< HEAD
+
     void on_skipButton_clicked();
 	void on_saveAndNextButton_clicked();
 	void on_cancelButton_clicked();
@@ -38,13 +39,7 @@ private slots:
 
     ImageData check_buttons();  //return image data for current button setup
     bool validate_buttons(ImageData currImage); //make sure all fields are selected
-=======
-	void on_skipButton_clicked();
-
-	void on_saveAndNextButton_clicked();
-
-	void on_cancelButton_clicked();
->>>>>>> 5784a4fdf9e154f445b71734d42f5ca56fae81da
+    void on_notTarget_clicked();
 
 private:
 	Ui::ImageLabelerGUI *ui;

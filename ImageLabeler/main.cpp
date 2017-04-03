@@ -11,13 +11,11 @@ int main(int argc, char *argv[])
 	ImageLabeler app(argc, argv);
 
 	// Test case
-<<<<<<< HEAD
-    app.setImageFormat("jpg");
-=======
-	app.setImageFormat("png");
->>>>>>> 5784a4fdf9e154f445b71734d42f5ca56fae81da
+	app.setImageFormat("PNG");
+
 	app.setRootDirectory("Z:/");
 	app.loadNext(); // Load first image
 
 	return app.run();
 }
+

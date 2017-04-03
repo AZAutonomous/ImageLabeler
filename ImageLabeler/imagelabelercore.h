@@ -9,7 +9,6 @@
 // Forward declaration
 class ImageLabelerGUI;
 
-<<<<<<< HEAD
 class ImageData{    //image data class
    public:
    QString filepath;
@@ -21,8 +20,7 @@ class ImageData{    //image data class
 };
 
 
-=======
->>>>>>> 5784a4fdf9e154f445b71734d42f5ca56fae81da
+
 class ImageLabeler
 {
 public:
@@ -31,36 +29,26 @@ public:
 
 	int run();
 
-<<<<<<< HEAD
-    void saveData(ImageData currImage); // TODO: ImageData class, JSON perhaps?
-=======
-	//void saveData(const ImageData& data); // TODO: ImageData class, JSON perhaps?
->>>>>>> 5784a4fdf9e154f445b71734d42f5ca56fae81da
+	// Creates a subdirectory, incrementing suffix to avoid filename collisions. Returns created filepath
+	QString createSubdir(const QString &subdir_root, const QString &filename);
+	void moveToSubdir(QString subdir);
+	void saveData(ImageData currImage, QString subdir = "");
+
 	bool loadNext(); // Return type?
 
-	void setRootDirectory(const QString& dir);
-	void setImageFormat(const QString& format);
-<<<<<<< HEAD
-    void moveToProcessedDir();
+	void setRootDirectory(QString dir);
+	void setImageFormat(QString format);
 
-private:
-	void loadIter();
-=======
+	QString getCurrFilename();
 
 private:
 	void loadIter();
 
->>>>>>> 5784a4fdf9e154f445b71734d42f5ca56fae81da
 	QApplication *app;
 	ImageLabelerGUI *gui;
 	WrappingQDirIterator *dirIter;
 	QDir rootDirectory;
 	QString imageFormat;
-<<<<<<< HEAD
-    int imageNumber;
-    QString rootDirectoryName;
-=======
->>>>>>> 5784a4fdf9e154f445b71734d42f5ca56fae81da
 };
 
 #endif // IMAGELABELERCORE_H
