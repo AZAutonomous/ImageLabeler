@@ -29,6 +29,10 @@ void ImageLabelerGUI::setRootDirectory(const QString &str)
 {
 	ui->rootDirField->setText(str);
 }
+void ImageLabelerGUI::setImageFormat(const QString &str)
+{
+    ui->imageFormatEdit->setText(str);
+}
 
 void ImageLabelerGUI::setFilepath(const QString &str)
 {
@@ -99,6 +103,14 @@ void ImageLabelerGUI::on_directoryButton_clicked()
     model->loadNext();
 
 }
+void ImageLabelerGUI::on_formatButton_clicked()
+{
+    QString format = ui->imageFormatEdit->text();
+    model->setImageFormat(format);
+    model->loadNext();
+}
+
+
 bool ImageLabelerGUI::validate_buttons(ImageData currImage){
     if(currImage.shape.length() == 0 ||
        currImage.shapeColor.length() == 0 ||
@@ -432,6 +444,7 @@ ImageData ImageLabelerGUI::check_buttons()
 
     return currImage;
 }
+
 
 
 

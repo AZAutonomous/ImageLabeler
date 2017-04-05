@@ -102,13 +102,14 @@ void ImageLabeler::setImageFormat(QString format)
 {
 	// Validate input
 	if (!format.isEmpty() && format.lastIndexOf(".") != -1) {
-		format = format.section(".", -1); // Extract file extension
+        format = format.section(".", -1); // Extract file extension
 #ifdef DEBUG
-	qDebug() << "Adjusted file extension to" << format;
+    qDebug() << "Adjusted file extension to" << format;
 #endif
-	}
+    }
 
-	imageFormat = format;
+    gui->setImageFormat(format);
+    imageFormat = format;
 }
 
 void ImageLabeler::loadIter()
@@ -126,10 +127,10 @@ void ImageLabeler::moveToSubdir(QString subdir){ //move process images to sepera
 
     QDir d = QDir(dirIter->filePath());
     //QString currNum = QString::fromStdString(std::to_string(imageNumber));
-	d.rename(dirIter->filePath(), rootDirectory.absolutePath() + subdir + dirIter->fileName());
+    d.rename(dirIter->filePath(), rootDirectory.absolutePath() + '/' + subdir + dirIter->fileName());
 
 #ifdef DEBUG
-	qDebug() << dirIter->filePath() + " moved to " + rootDirectory.absolutePath() + subdir + dirIter->fileName();
+    qDebug() << dirIter->filePath() + " moved to " + rootDirectory.absolutePath() + '/' + subdir + dirIter->fileName();
 #endif // DEBUG
 }
 
@@ -169,7 +170,7 @@ void ImageLabeler::saveData(ImageData currImage, QString subdir) //outputs data 
 	}
 
 	QString contents;
-	QFile file ( rootDirectory.absolutePath() + subdir + dirIter->fileInfo().baseName() + ".json" );
+    QFile file ( rootDirectory.absolutePath() + '/' + subdir + dirIter->fileInfo().baseName() + ".json" );
 
 	contents.append("{\n\t\"image\": ");
 	contents.append("\"" + dirIter->fileName() + "\",");

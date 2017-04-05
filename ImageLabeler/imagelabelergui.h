@@ -24,6 +24,7 @@ public:
 	~ImageLabelerGUI();
 
 	void setRootDirectory(const QString &str);
+    void setImageFormat(const QString &str);
 	void setFilepath(const QString &str);
 	void setImage(const QString &str);
 	void setComment(const QString &str);
@@ -40,6 +41,8 @@ private slots:
     ImageData check_buttons();  //return image data for current button setup
     bool validate_buttons(ImageData currImage); //make sure all fields are selected
     void on_notTarget_clicked();
+
+    void on_formatButton_clicked();
 
 private:
 	Ui::ImageLabelerGUI *ui;
