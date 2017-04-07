@@ -110,6 +110,7 @@ void ImageLabeler::setImageFormat(QString format)
 
     gui->setImageFormat(format);
     imageFormat = format;
+    loadIter();
 }
 
 void ImageLabeler::loadIter()
@@ -177,13 +178,13 @@ void ImageLabeler::saveData(ImageData currImage, QString subdir) //outputs data 
 	contents.append("\n\t\"shape\": \"");
 	contents.append( currImage.shape );
 	contents.append( "\",\n");
-	contents.append("\t\"shapeColor\": \"");
+    contents.append("\t\"background_color\": \"");
 	contents.append( currImage.shapeColor );
 	contents.append( "\",\n");
-	contents.append("\t\"letter\": \"");
+    contents.append("\t\"alphanumeric\": \"");
 	contents.append( currImage.letter );
 	contents.append( "\",\n");
-	contents.append("\t\"letterColor\": \"");
+    contents.append("\t\"alphanumeric_color\": \"");
 	contents.append( currImage.letterColor );
 	contents.append( "\",\n");
 	contents.append("\t\"orientation\": \"");

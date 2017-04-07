@@ -11,7 +11,7 @@ int main(int argc, char *argv[])
 	ImageLabeler app(argc, argv);
 
 	// Test case
-	app.setImageFormat("PNG");
+    app.setImageFormat("jpg");
 
 	app.setRootDirectory("Z:/");
 	app.loadNext(); // Load first image
