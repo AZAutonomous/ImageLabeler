@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1292</width>
-    <height>868</height>
+    <width>895</width>
+    <height>836</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -31,10 +31,16 @@ background-color: white;
    <layout class="QVBoxLayout" name="verticalLayout_2">
     <item>
      <widget class="QGroupBox" name="groupBox">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
       <property name="minimumSize">
        <size>
         <width>0</width>
-        <height>60</height>
+        <height>0</height>
        </size>
       </property>
       <property name="autoFillBackground">
@@ -48,7 +54,7 @@ background-color: white;
         <rect>
          <x>10</x>
          <y>10</y>
-         <width>731</width>
+         <width>671</width>
          <height>21</height>
         </rect>
        </property>
@@ -64,8 +70,8 @@ background-color: white;
         <rect>
          <x>0</x>
          <y>30</y>
-         <width>751</width>
-         <height>32</height>
+         <width>691</width>
+         <height>31</height>
         </rect>
        </property>
        <property name="text">
@@ -75,9 +81,9 @@ background-color: white;
       <widget class="QLineEdit" name="imageFormatEdit">
        <property name="geometry">
         <rect>
-         <x>760</x>
+         <x>700</x>
          <y>10</y>
-         <width>201</width>
+         <width>151</width>
          <height>21</height>
         </rect>
        </property>
@@ -85,9 +91,9 @@ background-color: white;
       <widget class="QPushButton" name="formatButton">
        <property name="geometry">
         <rect>
-         <x>750</x>
+         <x>690</x>
          <y>30</y>
-         <width>221</width>
+         <width>171</width>
          <height>32</height>
         </rect>
        </property>
@@ -95,82 +101,142 @@ background-color: white;
         <string>Set Image Format</string>
        </property>
       </widget>
-     </widget>
-    </item>
-    <item>
-     <widget class="QFrame" name="imageBox">
-      <property name="sizePolicy">
-       <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
-        <horstretch>0</horstretch>
-        <verstretch>0</verstretch>
-       </sizepolicy>
-      </property>
-      <property name="autoFillBackground">
-       <bool>true</bool>
-      </property>
-      <layout class="QVBoxLayout" name="verticalLayout_3">
-       <item>
-        <widget class="QLabel" name="imageFilepath">
-         <property name="sizePolicy">
-          <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-           <horstretch>0</horstretch>
-           <verstretch>0</verstretch>
-          </sizepolicy>
-         </property>
-         <property name="font">
-          <font>
-           <pointsize>10</pointsize>
-           <weight>75</weight>
-           <bold>true</bold>
-          </font>
-         </property>
-         <property name="text">
-          <string>Some text here</string>
-         </property>
-         <property name="textFormat">
-          <enum>Qt::PlainText</enum>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignCenter</set>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLabel" name="image">
-         <property name="sizePolicy">
-          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-           <horstretch>0</horstretch>
-           <verstretch>0</verstretch>
-          </sizepolicy>
-         </property>
-         <property name="minimumSize">
-          <size>
-           <width>192</width>
-           <height>192</height>
-          </size>
-         </property>
-         <property name="maximumSize">
-          <size>
-           <width>192</width>
-           <height>192</height>
-          </size>
-         </property>
-         <property name="text">
-          <string/>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLabel" name="imageComment">
-         <property name="text">
-          <string>TextLabel</string>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignCenter</set>
-         </property>
-        </widget>
-       </item>
-      </layout>
+      <widget class="QFrame" name="imageBox">
+       <property name="geometry">
+        <rect>
+         <x>271</x>
+         <y>60</y>
+         <width>400</width>
+         <height>201</height>
+        </rect>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Fixed" vsizetype="Minimum">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>400</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="autoFillBackground">
+        <bool>true</bool>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_3">
+        <item>
+         <widget class="QLabel" name="imageFilepath">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>Some text here</string>
+          </property>
+          <property name="textFormat">
+           <enum>Qt::PlainText</enum>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="image">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>192</width>
+            <height>192</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>192</width>
+            <height>192</height>
+           </size>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="imageComment">
+          <property name="text">
+           <string>TextLabel</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QToolButton" name="notTarget">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>710</x>
+         <y>110</y>
+         <width>131</width>
+         <height>111</height>
+        </rect>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>90</width>
+         <height>90</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>13</pointsize>
+        </font>
+       </property>
+       <property name="autoFillBackground">
+        <bool>false</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">selection-background-color: rgb(252, 0, 6);</string>
+       </property>
+       <property name="text">
+        <string>Not a Target</string>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>20</width>
+         <height>20</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+      </widget>
      </widget>
     </item>
     <item>
@@ -205,7 +271,7 @@ background-color: white;
             <item row="0" column="5">
              <widget class="QPushButton" name="rectangle">
               <property name="sizePolicy">
-               <sizepolicy hsizetype="Minimum" vsizetype="MinimumExpanding">
+               <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
                 <horstretch>0</horstretch>
                 <verstretch>0</verstretch>
                </sizepolicy>
@@ -213,7 +279,7 @@ background-color: white;
               <property name="minimumSize">
                <size>
                 <width>0</width>
-                <height>40</height>
+                <height>35</height>
                </size>
               </property>
               <property name="styleSheet">
@@ -233,7 +299,7 @@ background-color: white;
             <item row="0" column="4">
              <widget class="QPushButton" name="square">
               <property name="sizePolicy">
-               <sizepolicy hsizetype="Minimum" vsizetype="MinimumExpanding">
+               <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
                 <horstretch>0</horstretch>
                 <verstretch>0</verstretch>
                </sizepolicy>
@@ -241,7 +307,7 @@ background-color: white;
               <property name="minimumSize">
                <size>
                 <width>0</width>
-                <height>40</height>
+                <height>35</height>
                </size>
               </property>
               <property name="styleSheet">
@@ -261,7 +327,7 @@ background-color: white;
             <item row="0" column="2">
              <widget class="QPushButton" name="quartercircle">
               <property name="sizePolicy">
-               <sizepolicy hsizetype="Minimum" vsizetype="MinimumExpanding">
+               <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
                 <horstretch>0</horstretch>
                 <verstretch>0</verstretch>
                </sizepolicy>
@@ -269,7 +335,7 @@ background-color: white;
               <property name="minimumSize">
                <size>
                 <width>0</width>
-                <height>40</height>
+                <height>35</height>
                </size>
               </property>
               <property name="styleSheet">
@@ -289,7 +355,7 @@ background-color: white;
             <item row="0" column="3">
              <widget class="QPushButton" name="triangle">
               <property name="sizePolicy">
-               <sizepolicy hsizetype="Minimum" vsizetype="MinimumExpanding">
+               <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
                 <horstretch>0</horstretch>
                 <verstretch>0</verstretch>
                </sizepolicy>
@@ -297,7 +363,7 @@ background-color: white;
               <property name="minimumSize">
                <size>
                 <width>0</width>
-                <height>40</height>
+                <height>35</height>
                </size>
               </property>
               <property name="styleSheet">
@@ -317,7 +383,7 @@ background-color: white;
             <item row="2" column="0">
              <widget class="QPushButton" name="pentagon">
               <property name="sizePolicy">
-               <sizepolicy hsizetype="Minimum" vsizetype="MinimumExpanding">
+               <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
                 <horstretch>0</horstretch>
                 <verstretch>0</verstretch>
                </sizepolicy>
@@ -325,7 +391,7 @@ background-color: white;
               <property name="minimumSize">
                <size>
                 <width>0</width>
-                <height>40</height>
+                <height>35</height>
                </size>
               </property>
               <property name="styleSheet">
@@ -345,7 +411,7 @@ background-color: white;
             <item row="2" column="5">
              <widget class="QPushButton" name="cross">
               <property name="sizePolicy">
-               <sizepolicy hsizetype="Minimum" vsizetype="MinimumExpanding">
+               <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
                 <horstretch>0</horstretch>
                 <verstretch>0</verstretch>
                </sizepolicy>
@@ -353,7 +419,7 @@ background-color: white;
               <property name="minimumSize">
                <size>
                 <width>0</width>
-                <height>40</height>
+                <height>35</height>
                </size>
               </property>
               <property name="styleSheet">
@@ -373,7 +439,7 @@ background-color: white;
             <item row="0" column="0">
              <widget class="QPushButton" name="circle">
               <property name="sizePolicy">
-               <sizepolicy hsizetype="Minimum" vsizetype="MinimumExpanding">
+               <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
                 <horstretch>0</horstretch>
                 <verstretch>0</verstretch>
                </sizepolicy>
@@ -381,7 +447,7 @@ background-color: white;
               <property name="minimumSize">
                <size>
                 <width>0</width>
-                <height>40</height>
+                <height>35</height>
                </size>
               </property>
               <property name="styleSheet">
@@ -401,7 +467,7 @@ background-color: white;
             <item row="2" column="1">
              <widget class="QPushButton" name="hexagon">
               <property name="sizePolicy">
-               <sizepolicy hsizetype="Minimum" vsizetype="MinimumExpanding">
+               <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
                 <horstretch>0</horstretch>
                 <verstretch>0</verstretch>
                </sizepolicy>
@@ -409,7 +475,7 @@ background-color: white;
               <property name="minimumSize">
                <size>
                 <width>0</width>
-                <height>40</height>
+                <height>35</height>
                </size>
               </property>
               <property name="styleSheet">
@@ -429,7 +495,7 @@ background-color: white;
             <item row="0" column="6">
              <widget class="QPushButton" name="trapezoid">
               <property name="sizePolicy">
-               <sizepolicy hsizetype="Minimum" vsizetype="MinimumExpanding">
+               <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
                 <horstretch>0</horstretch>
                 <verstretch>0</verstretch>
                </sizepolicy>
@@ -437,7 +503,7 @@ background-color: white;
               <property name="minimumSize">
                <size>
                 <width>0</width>
-                <height>40</height>
+                <height>35</height>
                </size>
               </property>
               <property name="styleSheet">
@@ -457,10 +523,16 @@ background-color: white;
             <item row="2" column="4">
              <widget class="QPushButton" name="star">
               <property name="sizePolicy">
-               <sizepolicy hsizetype="Minimum" vsizetype="MinimumExpanding">
+               <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
                 <horstretch>0</horstretch>
                 <verstretch>0</verstretch>
                </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>35</height>
+               </size>
               </property>
               <property name="styleSheet">
                <string notr="true"/>
@@ -479,7 +551,7 @@ background-color: white;
             <item row="2" column="3">
              <widget class="QPushButton" name="octagon">
               <property name="sizePolicy">
-               <sizepolicy hsizetype="Minimum" vsizetype="MinimumExpanding">
+               <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
                 <horstretch>0</horstretch>
                 <verstretch>0</verstretch>
                </sizepolicy>
@@ -487,7 +559,7 @@ background-color: white;
               <property name="minimumSize">
                <size>
                 <width>0</width>
-                <height>40</height>
+                <height>35</height>
                </size>
               </property>
               <property name="styleSheet">
@@ -507,7 +579,7 @@ background-color: white;
             <item row="2" column="2">
              <widget class="QPushButton" name="heptagon">
               <property name="sizePolicy">
-               <sizepolicy hsizetype="Minimum" vsizetype="MinimumExpanding">
+               <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
                 <horstretch>0</horstretch>
                 <verstretch>0</verstretch>
                </sizepolicy>
@@ -515,7 +587,7 @@ background-color: white;
               <property name="minimumSize">
                <size>
                 <width>0</width>
-                <height>40</height>
+                <height>35</height>
                </size>
               </property>
               <property name="styleSheet">
@@ -535,7 +607,7 @@ background-color: white;
             <item row="0" column="1">
              <widget class="QPushButton" name="semicircle">
               <property name="sizePolicy">
-               <sizepolicy hsizetype="Minimum" vsizetype="MinimumExpanding">
+               <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
                 <horstretch>0</horstretch>
                 <verstretch>0</verstretch>
                </sizepolicy>
@@ -543,7 +615,7 @@ background-color: white;
               <property name="minimumSize">
                <size>
                 <width>0</width>
-                <height>40</height>
+                <height>35</height>
                </size>
               </property>
               <property name="styleSheet">
@@ -578,8 +650,8 @@ background-color: white;
             <property name="spacing">
              <number>0</number>
             </property>
-            <item row="3" column="0">
-             <widget class="QPushButton" name="SW">
+            <item row="1" column="0">
+             <widget class="QPushButton" name="NW">
               <property name="minimumSize">
                <size>
                 <width>0</width>
@@ -587,102 +659,7 @@ background-color: white;
                </size>
               </property>
               <property name="text">
-               <string>SW</string>
-              </property>
-              <property name="checkable">
-               <bool>true</bool>
-              </property>
-              <attribute name="buttonGroup">
-               <string notr="true">dirButtons</string>
-              </attribute>
-             </widget>
-            </item>
-            <item row="3" column="1">
-             <widget class="QPushButton" name="S">
-              <property name="minimumSize">
-               <size>
-                <width>0</width>
-                <height>35</height>
-               </size>
-              </property>
-              <property name="text">
-               <string>S</string>
-              </property>
-              <property name="checkable">
-               <bool>true</bool>
-              </property>
-              <attribute name="buttonGroup">
-               <string notr="true">dirButtons</string>
-              </attribute>
-             </widget>
-            </item>
-            <item row="3" column="2">
-             <widget class="QPushButton" name="SE">
-              <property name="minimumSize">
-               <size>
-                <width>0</width>
-                <height>35</height>
-               </size>
-              </property>
-              <property name="text">
-               <string>SE</string>
-              </property>
-              <property name="checkable">
-               <bool>true</bool>
-              </property>
-              <attribute name="buttonGroup">
-               <string notr="true">dirButtons</string>
-              </attribute>
-             </widget>
-            </item>
-            <item row="2" column="0">
-             <widget class="QPushButton" name="W">
-              <property name="minimumSize">
-               <size>
-                <width>0</width>
-                <height>35</height>
-               </size>
-              </property>
-              <property name="text">
-               <string>W</string>
-              </property>
-              <property name="checkable">
-               <bool>true</bool>
-              </property>
-              <attribute name="buttonGroup">
-               <string notr="true">dirButtons</string>
-              </attribute>
-             </widget>
-            </item>
-            <item row="2" column="2">
-             <widget class="QPushButton" name="E">
-              <property name="minimumSize">
-               <size>
-                <width>0</width>
-                <height>35</height>
-               </size>
-              </property>
-              <property name="text">
-               <string>E</string>
-              </property>
-              <property name="checkable">
-               <bool>true</bool>
-              </property>
-              <attribute name="buttonGroup">
-               <string notr="true">dirButtons</string>
-              </attribute>
-             </widget>
-            </item>
-            <item row="1" column="1">
-             <widget class="QPushButton" name="N">
-              <property name="minimumSize">
-               <size>
-                <width>0</width>
-                <height>35</height>
-               </size>
-              </property>
-              <property name="text">
-               <string>N</string>
+               <string>NW</string>
               </property>
               <property name="checkable">
                <bool>true</bool>
@@ -714,8 +691,8 @@ background-color: white;
               </attribute>
              </widget>
             </item>
-            <item row="1" column="0">
-             <widget class="QPushButton" name="NW">
+            <item row="1" column="1">
+             <widget class="QPushButton" name="N">
               <property name="minimumSize">
                <size>
                 <width>0</width>
@@ -723,7 +700,102 @@ background-color: white;
                </size>
               </property>
               <property name="text">
-               <string>NW</string>
+               <string>N</string>
+              </property>
+              <property name="checkable">
+               <bool>true</bool>
+              </property>
+              <attribute name="buttonGroup">
+               <string notr="true">dirButtons</string>
+              </attribute>
+             </widget>
+            </item>
+            <item row="2" column="0">
+             <widget class="QPushButton" name="W">
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>35</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>W</string>
+              </property>
+              <property name="checkable">
+               <bool>true</bool>
+              </property>
+              <attribute name="buttonGroup">
+               <string notr="true">dirButtons</string>
+              </attribute>
+             </widget>
+            </item>
+            <item row="4" column="2">
+             <widget class="QPushButton" name="SE">
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>35</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>SE</string>
+              </property>
+              <property name="checkable">
+               <bool>true</bool>
+              </property>
+              <attribute name="buttonGroup">
+               <string notr="true">dirButtons</string>
+              </attribute>
+             </widget>
+            </item>
+            <item row="4" column="1">
+             <widget class="QPushButton" name="S">
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>35</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>S</string>
+              </property>
+              <property name="checkable">
+               <bool>true</bool>
+              </property>
+              <attribute name="buttonGroup">
+               <string notr="true">dirButtons</string>
+              </attribute>
+             </widget>
+            </item>
+            <item row="4" column="0">
+             <widget class="QPushButton" name="SW">
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>35</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>SW</string>
+              </property>
+              <property name="checkable">
+               <bool>true</bool>
+              </property>
+              <attribute name="buttonGroup">
+               <string notr="true">dirButtons</string>
+              </attribute>
+             </widget>
+            </item>
+            <item row="2" column="2">
+             <widget class="QPushButton" name="E">
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>35</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>E</string>
               </property>
               <property name="checkable">
                <bool>true</bool>
@@ -734,43 +806,6 @@ background-color: white;
              </widget>
             </item>
            </layout>
-          </widget>
-         </item>
-         <item>
-          <widget class="QToolButton" name="notTarget">
-           <property name="enabled">
-            <bool>true</bool>
-           </property>
-           <property name="sizePolicy">
-            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-             <horstretch>0</horstretch>
-             <verstretch>0</verstretch>
-            </sizepolicy>
-           </property>
-           <property name="minimumSize">
-            <size>
-             <width>90</width>
-             <height>90</height>
-            </size>
-           </property>
-           <property name="autoFillBackground">
-            <bool>false</bool>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">selection-background-color: rgb(252, 0, 6);</string>
-           </property>
-           <property name="text">
-            <string>Not a Target</string>
-           </property>
-           <property name="iconSize">
-            <size>
-             <width>20</width>
-             <height>20</height>
-            </size>
-           </property>
-           <property name="checkable">
-            <bool>true</bool>
-           </property>
           </widget>
          </item>
         </layout>
@@ -994,6 +1029,7 @@ background-color: white;
 }
 QPushButton::checked {
 	background-color: darkgray;
+border: 1px solid white;
 }
 QPushButton:pressed {
 	color: white;
@@ -1027,6 +1063,7 @@ QPushButton:pressed {
 }
 QPushButton::checked {
 	background-color: gray;
+	border: 1px solid black;
 }</string>
             </property>
             <property name="text">
@@ -1057,6 +1094,7 @@ QPushButton::checked {
 }
 QPushButton:checked {
 	background-color: darkgray;
+border: 1px solid white;
 }
 QPushButton:pressed {
 	color: white;
@@ -1090,6 +1128,7 @@ QPushButton:pressed {
 }
 QPushButton::checked {
 	background-color: darkgray;
+border: 1px solid white;
 }
 QPushButton:pressed {
 	color: white;
@@ -1123,6 +1162,7 @@ QPushButton:pressed {
 }
 QPushButton::checked {
 	background-color: darkgray;
+border: 1px solid white;
 }
 QPushButton:pressed {
 	color: white;
@@ -1156,6 +1196,7 @@ QPushButton:pressed {
 }
 QPushButton:checked {
 	background-color: darkgray;
+border: 1px solid white;
 }
 QPushButton:pressed {
 	color: white;
@@ -1189,6 +1230,7 @@ QPushButton:pressed {
 }
 QPushButton::checked {
 	background-color: darkgray;
+border: 1px solid white;
 }
 QPushButton:pressed {
 	color: white;
@@ -1222,6 +1264,8 @@ QPushButton:pressed {
 }
 QPushButton::checked {
 	background-color: darkgray;
+border: 1px solid white;
+
 }
 QPushButton:pressed {
 	color: white;
@@ -1255,6 +1299,7 @@ QPushButton:pressed {
 }
 QPushButton::checked {
 	background-color: darkgray;
+border: 1px solid white;
 }
 QPushButton:pressed {
 	color: white;
@@ -1288,6 +1333,7 @@ QPushButton:pressed {
 }
 QPushButton::checked {
 	background-color: darkgray;
+	border: 1px solid white;
 }
 QPushButton:pressed {
 	color: white;
@@ -1327,6 +1373,12 @@ QPushButton:pressed {
           </property>
           <item row="3" column="5">
            <widget class="QPushButton" name="three">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>0</height>
+             </size>
+            </property>
             <property name="text">
              <string>3</string>
             </property>
@@ -1340,6 +1392,12 @@ QPushButton:pressed {
           </item>
           <item row="0" column="5">
            <widget class="QPushButton" name="d">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>0</height>
+             </size>
+            </property>
             <property name="text">
              <string>D</string>
             </property>
@@ -1353,6 +1411,12 @@ QPushButton:pressed {
           </item>
           <item row="1" column="11">
            <widget class="QPushButton" name="s">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>0</height>
+             </size>
+            </property>
             <property name="text">
              <string>S</string>
             </property>
@@ -1366,6 +1430,12 @@ QPushButton:pressed {
           </item>
           <item row="1" column="13">
            <widget class="QPushButton" name="t">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>0</height>
+             </size>
+            </property>
             <property name="text">
              <string>T</string>
             </property>
@@ -1379,6 +1449,12 @@ QPushButton:pressed {
           </item>
           <item row="1" column="9">
            <widget class="QPushButton" name="q">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>0</height>
+             </size>
+            </property>
             <property name="text">
              <string>Q</string>
             </property>
@@ -1392,6 +1468,12 @@ QPushButton:pressed {
           </item>
           <item row="0" column="13">
            <widget class="QPushButton" name="j">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>0</height>
+             </size>
+            </property>
             <property name="text">
              <string>J</string>
             </property>
@@ -1405,6 +1487,12 @@ QPushButton:pressed {
           </item>
           <item row="1" column="8">
            <widget class="QPushButton" name="p">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>0</height>
+             </size>
+            </property>
             <property name="text">
              <string>P</string>
             </property>
@@ -1418,6 +1506,12 @@ QPushButton:pressed {
           </item>
           <item row="1" column="10">
            <widget class="QPushButton" name="r">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>0</height>
+             </size>
+            </property>
             <property name="text">
              <string>R</string>
             </property>
@@ -1431,6 +1525,12 @@ QPushButton:pressed {
           </item>
           <item row="1" column="5">
            <widget class="QPushButton" name="n">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>0</height>
+             </size>
+            </property>
             <property name="text">
              <string>N</string>
             </property>
@@ -1444,6 +1544,12 @@ QPushButton:pressed {
           </item>
           <item row="1" column="3">
            <widget class="QPushButton" name="l">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>0</height>
+             </size>
+            </property>
             <property name="text">
              <string>L</string>
             </property>
@@ -1457,6 +1563,12 @@ QPushButton:pressed {
           </item>
           <item row="1" column="1">
            <widget class="QPushButton" name="k">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>0</height>
+             </size>
+            </property>
             <property name="text">
              <string>K</string>
             </property>
@@ -1470,6 +1582,12 @@ QPushButton:pressed {
           </item>
           <item row="1" column="7">
            <widget class="QPushButton" name="o">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>0</height>
+             </size>
+            </property>
             <property name="text">
              <string>O</string>
             </property>
@@ -1483,6 +1601,12 @@ QPushButton:pressed {
           </item>
           <item row="2" column="1">
            <widget class="QPushButton" name="u">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>0</height>
+             </size>
+            </property>
             <property name="text">
              <string>U</string>
             </property>
@@ -1496,6 +1620,12 @@ QPushButton:pressed {
           </item>
           <item row="1" column="4">
            <widget class="QPushButton" name="m">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>0</height>
+             </size>
+            </property>
             <property name="text">
              <string>M</string>
             </property>
@@ -1509,6 +1639,12 @@ QPushButton:pressed {
           </item>
           <item row="3" column="3">
            <widget class="QPushButton" name="one">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>0</height>
+             </size>
+            </property>
             <property name="text">
              <string>1</string>
             </property>
@@ -1522,8 +1658,378 @@ QPushButton:pressed {
           </item>
           <item row="3" column="11">
            <widget class="QPushButton" name="eight">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>0</height>
+             </size>
+            </property>
             <property name="text">
              <string>8</string>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+            <attribute name="buttonGroup">
+             <string notr="true">letterButtons</string>
+            </attribute>
+           </widget>
+          </item>
+          <item row="3" column="8">
+           <widget class="QPushButton" name="five">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>5</string>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+            <attribute name="buttonGroup">
+             <string notr="true">letterButtons</string>
+            </attribute>
+           </widget>
+          </item>
+          <item row="3" column="7">
+           <widget class="QPushButton" name="four">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>4</string>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+            <attribute name="buttonGroup">
+             <string notr="true">letterButtons</string>
+            </attribute>
+           </widget>
+          </item>
+          <item row="3" column="9">
+           <widget class="QPushButton" name="six">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>6</string>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+            <attribute name="buttonGroup">
+             <string notr="true">letterButtons</string>
+            </attribute>
+           </widget>
+          </item>
+          <item row="2" column="8">
+           <widget class="QPushButton" name="z">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>Z</string>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+            <attribute name="buttonGroup">
+             <string notr="true">letterButtons</string>
+            </attribute>
+           </widget>
+          </item>
+          <item row="2" column="7">
+           <widget class="QPushButton" name="y">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>Y</string>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+            <attribute name="buttonGroup">
+             <string notr="true">letterButtons</string>
+            </attribute>
+           </widget>
+          </item>
+          <item row="2" column="5">
+           <widget class="QPushButton" name="x">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>X</string>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+            <attribute name="buttonGroup">
+             <string notr="true">letterButtons</string>
+            </attribute>
+           </widget>
+          </item>
+          <item row="2" column="4">
+           <widget class="QPushButton" name="w">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>W</string>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+            <attribute name="buttonGroup">
+             <string notr="true">letterButtons</string>
+            </attribute>
+           </widget>
+          </item>
+          <item row="0" column="10">
+           <widget class="QPushButton" name="h">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string/>
+            </property>
+            <property name="text">
+             <string>H</string>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+            <attribute name="buttonGroup">
+             <string notr="true">letterButtons</string>
+            </attribute>
+           </widget>
+          </item>
+          <item row="0" column="11">
+           <widget class="QPushButton" name="i">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>I</string>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+            <attribute name="buttonGroup">
+             <string notr="true">letterButtons</string>
+            </attribute>
+           </widget>
+          </item>
+          <item row="0" column="9">
+           <widget class="QPushButton" name="g">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>G</string>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+            <attribute name="buttonGroup">
+             <string notr="true">letterButtons</string>
+            </attribute>
+           </widget>
+          </item>
+          <item row="0" column="8">
+           <widget class="QPushButton" name="f">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>F</string>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+            <attribute name="buttonGroup">
+             <string notr="true">letterButtons</string>
+            </attribute>
+           </widget>
+          </item>
+          <item row="2" column="3">
+           <widget class="QPushButton" name="v">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>V</string>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+            <attribute name="buttonGroup">
+             <string notr="true">letterButtons</string>
+            </attribute>
+           </widget>
+          </item>
+          <item row="0" column="4">
+           <widget class="QPushButton" name="c">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>C</string>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+            <attribute name="buttonGroup">
+             <string notr="true">letterButtons</string>
+            </attribute>
+           </widget>
+          </item>
+          <item row="3" column="13">
+           <widget class="QPushButton" name="nine">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>9</string>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+            <attribute name="buttonGroup">
+             <string notr="true">letterButtons</string>
+            </attribute>
+           </widget>
+          </item>
+          <item row="3" column="10">
+           <widget class="QPushButton" name="seven">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>7</string>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+            <attribute name="buttonGroup">
+             <string notr="true">letterButtons</string>
+            </attribute>
+           </widget>
+          </item>
+          <item row="0" column="7">
+           <widget class="QPushButton" name="e">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>E</string>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+            <attribute name="buttonGroup">
+             <string notr="true">letterButtons</string>
+            </attribute>
+           </widget>
+          </item>
+          <item row="3" column="4">
+           <widget class="QPushButton" name="two">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>2</string>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+            <attribute name="buttonGroup">
+             <string notr="true">letterButtons</string>
+            </attribute>
+           </widget>
+          </item>
+          <item row="3" column="1">
+           <widget class="QPushButton" name="zero">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>0</string>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+            <attribute name="buttonGroup">
+             <string notr="true">letterButtons</string>
+            </attribute>
+           </widget>
+          </item>
+          <item row="0" column="3">
+           <widget class="QPushButton" name="b">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>B</string>
             </property>
             <property name="checkable">
              <bool>true</bool>
@@ -1544,258 +2050,14 @@ QPushButton:pressed {
               <verstretch>0</verstretch>
              </sizepolicy>
             </property>
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>0</height>
+             </size>
+            </property>
             <property name="text">
              <string>A</string>
-            </property>
-            <property name="checkable">
-             <bool>true</bool>
-            </property>
-            <attribute name="buttonGroup">
-             <string notr="true">letterButtons</string>
-            </attribute>
-           </widget>
-          </item>
-          <item row="3" column="8">
-           <widget class="QPushButton" name="five">
-            <property name="text">
-             <string>5</string>
-            </property>
-            <property name="checkable">
-             <bool>true</bool>
-            </property>
-            <attribute name="buttonGroup">
-             <string notr="true">letterButtons</string>
-            </attribute>
-           </widget>
-          </item>
-          <item row="3" column="7">
-           <widget class="QPushButton" name="four">
-            <property name="text">
-             <string>4</string>
-            </property>
-            <property name="checkable">
-             <bool>true</bool>
-            </property>
-            <attribute name="buttonGroup">
-             <string notr="true">letterButtons</string>
-            </attribute>
-           </widget>
-          </item>
-          <item row="3" column="9">
-           <widget class="QPushButton" name="six">
-            <property name="text">
-             <string>6</string>
-            </property>
-            <property name="checkable">
-             <bool>true</bool>
-            </property>
-            <attribute name="buttonGroup">
-             <string notr="true">letterButtons</string>
-            </attribute>
-           </widget>
-          </item>
-          <item row="2" column="8">
-           <widget class="QPushButton" name="z">
-            <property name="text">
-             <string>Z</string>
-            </property>
-            <property name="checkable">
-             <bool>true</bool>
-            </property>
-            <attribute name="buttonGroup">
-             <string notr="true">letterButtons</string>
-            </attribute>
-           </widget>
-          </item>
-          <item row="2" column="7">
-           <widget class="QPushButton" name="y">
-            <property name="text">
-             <string>Y</string>
-            </property>
-            <property name="checkable">
-             <bool>true</bool>
-            </property>
-            <attribute name="buttonGroup">
-             <string notr="true">letterButtons</string>
-            </attribute>
-           </widget>
-          </item>
-          <item row="2" column="5">
-           <widget class="QPushButton" name="x">
-            <property name="text">
-             <string>X</string>
-            </property>
-            <property name="checkable">
-             <bool>true</bool>
-            </property>
-            <attribute name="buttonGroup">
-             <string notr="true">letterButtons</string>
-            </attribute>
-           </widget>
-          </item>
-          <item row="2" column="4">
-           <widget class="QPushButton" name="w">
-            <property name="text">
-             <string>W</string>
-            </property>
-            <property name="checkable">
-             <bool>true</bool>
-            </property>
-            <attribute name="buttonGroup">
-             <string notr="true">letterButtons</string>
-            </attribute>
-           </widget>
-          </item>
-          <item row="0" column="10">
-           <widget class="QPushButton" name="h">
-            <property name="styleSheet">
-             <string/>
-            </property>
-            <property name="text">
-             <string>H</string>
-            </property>
-            <property name="checkable">
-             <bool>true</bool>
-            </property>
-            <attribute name="buttonGroup">
-             <string notr="true">letterButtons</string>
-            </attribute>
-           </widget>
-          </item>
-          <item row="0" column="11">
-           <widget class="QPushButton" name="i">
-            <property name="text">
-             <string>I</string>
-            </property>
-            <property name="checkable">
-             <bool>true</bool>
-            </property>
-            <attribute name="buttonGroup">
-             <string notr="true">letterButtons</string>
-            </attribute>
-           </widget>
-          </item>
-          <item row="0" column="9">
-           <widget class="QPushButton" name="g">
-            <property name="text">
-             <string>G</string>
-            </property>
-            <property name="checkable">
-             <bool>true</bool>
-            </property>
-            <attribute name="buttonGroup">
-             <string notr="true">letterButtons</string>
-            </attribute>
-           </widget>
-          </item>
-          <item row="0" column="8">
-           <widget class="QPushButton" name="f">
-            <property name="text">
-             <string>F</string>
-            </property>
-            <property name="checkable">
-             <bool>true</bool>
-            </property>
-            <attribute name="buttonGroup">
-             <string notr="true">letterButtons</string>
-            </attribute>
-           </widget>
-          </item>
-          <item row="2" column="3">
-           <widget class="QPushButton" name="v">
-            <property name="text">
-             <string>V</string>
-            </property>
-            <property name="checkable">
-             <bool>true</bool>
-            </property>
-            <attribute name="buttonGroup">
-             <string notr="true">letterButtons</string>
-            </attribute>
-           </widget>
-          </item>
-          <item row="0" column="4">
-           <widget class="QPushButton" name="c">
-            <property name="text">
-             <string>C</string>
-            </property>
-            <property name="checkable">
-             <bool>true</bool>
-            </property>
-            <attribute name="buttonGroup">
-             <string notr="true">letterButtons</string>
-            </attribute>
-           </widget>
-          </item>
-          <item row="3" column="13">
-           <widget class="QPushButton" name="nine">
-            <property name="text">
-             <string>9</string>
-            </property>
-            <property name="checkable">
-             <bool>true</bool>
-            </property>
-            <attribute name="buttonGroup">
-             <string notr="true">letterButtons</string>
-            </attribute>
-           </widget>
-          </item>
-          <item row="3" column="10">
-           <widget class="QPushButton" name="seven">
-            <property name="text">
-             <string>7</string>
-            </property>
-            <property name="checkable">
-             <bool>true</bool>
-            </property>
-            <attribute name="buttonGroup">
-             <string notr="true">letterButtons</string>
-            </attribute>
-           </widget>
-          </item>
-          <item row="0" column="7">
-           <widget class="QPushButton" name="e">
-            <property name="text">
-             <string>E</string>
-            </property>
-            <property name="checkable">
-             <bool>true</bool>
-            </property>
-            <attribute name="buttonGroup">
-             <string notr="true">letterButtons</string>
-            </attribute>
-           </widget>
-          </item>
-          <item row="3" column="4">
-           <widget class="QPushButton" name="two">
-            <property name="text">
-             <string>2</string>
-            </property>
-            <property name="checkable">
-             <bool>true</bool>
-            </property>
-            <attribute name="buttonGroup">
-             <string notr="true">letterButtons</string>
-            </attribute>
-           </widget>
-          </item>
-          <item row="3" column="1">
-           <widget class="QPushButton" name="zero">
-            <property name="text">
-             <string>0</string>
-            </property>
-            <property name="checkable">
-             <bool>true</bool>
-            </property>
-            <attribute name="buttonGroup">
-             <string notr="true">letterButtons</string>
-            </attribute>
-           </widget>
-          </item>
-          <item row="0" column="3">
-           <widget class="QPushButton" name="b">
-            <property name="text">
-             <string>B</string>
             </property>
             <property name="checkable">
              <bool>true</bool>
@@ -1852,6 +2114,7 @@ QPushButton:pressed {
 }
 QPushButton::checked {
 	background-color: darkgray;
+border: 1px solid white;
 }
 QPushButton:pressed {
 	color: white;
@@ -1891,6 +2154,7 @@ QPushButton:pressed {
 }
 QPushButton::checked {
 	background-color: gray;
+border: 1px solid white;
 }</string>
             </property>
             <property name="text">
@@ -1927,6 +2191,7 @@ QPushButton::checked {
 }
 QPushButton::checked {
 	background-color: darkgray;
+border: 1px solid white;
 }QPushButton:pressed {
 	color: white;
 }</string>
@@ -1965,6 +2230,7 @@ QPushButton::checked {
 }
 QPushButton::checked {
 	background-color: darkgray;
+border: 1px solid white;
 }QPushButton:pressed {
 	color: white;
 }</string>
@@ -2003,6 +2269,7 @@ QPushButton::checked {
 }
 QPushButton::checked {
 	background-color: darkgray;
+border: 1px solid white;
 }QPushButton:pressed {
 	color: white;
 }</string>
@@ -2041,6 +2308,7 @@ QPushButton::checked {
 }
 QPushButton::checked {
 	background-color: darkgray;
+border: 1px solid white;
 }
 QPushButton:pressed {
 	color: white;
@@ -2080,6 +2348,7 @@ QPushButton:pressed {
 }
 QPushButton::checked {
 	background-color: darkgray;
+border: 1px solid white;
 }
 QPushButton:pressed {
 	color: white;
@@ -2119,6 +2388,7 @@ QPushButton:pressed {
 }
 QPushButton::checked {
 	background-color: darkgray;
+border: 1px solid white;
 }QPushButton:pressed {
 	color: white;
 }</string>
@@ -2157,6 +2427,7 @@ QPushButton::checked {
 }
 QPushButton::checked {
 	background-color: darkgray;
+border: 1px solid white;
 }QPushButton:pressed {
 	color: white;
 }</string>
@@ -2195,6 +2466,7 @@ QPushButton::checked {
 }
 QPushButton::checked {
 	background-color: darkgray;
+border: 1px solid white;
 }QPushButton:pressed {
 	color: white;
 }</string>
@@ -2233,6 +2505,12 @@ QPushButton::checked {
          </item>
          <item>
           <widget class="QPushButton" name="skipButton">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
            <property name="minimumSize">
             <size>
              <width>0</width>
@@ -2246,6 +2524,12 @@ QPushButton::checked {
          </item>
          <item>
           <widget class="QPushButton" name="saveAndNextButton">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="MinimumExpanding" vsizetype="Minimum">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
            <property name="minimumSize">
             <size>
              <width>0</width>
@@ -2259,6 +2543,12 @@ QPushButton::checked {
          </item>
          <item>
           <widget class="QPushButton" name="cancelButton">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
            <property name="minimumSize">
             <size>
              <width>0</width>
@@ -2284,8 +2574,8 @@ QPushButton::checked {
  <buttongroups>
   <buttongroup name="shapeButtons"/>
   <buttongroup name="dirButtons"/>
+  <buttongroup name="letterButtons"/>
   <buttongroup name="letterColorButtons"/>
   <buttongroup name="colorButtons"/>
-  <buttongroup name="letterButtons"/>
  </buttongroups>
 </ui>

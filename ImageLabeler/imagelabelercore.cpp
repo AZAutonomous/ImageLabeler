@@ -38,6 +38,15 @@ int ImageLabeler::run()
 
 {
 	gui->show();
+
+    QFile File("/Users/Isaac/Documents/AAV/ImageLabeler/ImageLabeler/stylesheet.qss");   //style sheet
+    File.open(QFile::ReadOnly);
+    QString StyleSheet = QLatin1String(File.readAll());
+#ifdef DEBUG
+    qDebug() << "Stylesheet found";
+#endif
+
+    qApp->setStyleSheet(StyleSheet);
 	return app->exec();
 }
 
