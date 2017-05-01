@@ -417,28 +417,28 @@ ImageData ImageLabelerGUI::check_buttons()
 
 		//check orientation
 		if(ui->dirButtons->checkedButton() == ui->NW){
-			currImage.orientation = "nw";
+            currImage.orientation = "NW";
 		}
 		if(ui->dirButtons->checkedButton() == ui->N){
-			currImage.orientation = "n";
+            currImage.orientation = "N";
 		}
 		if(ui->dirButtons->checkedButton() == ui->NE){
-			currImage.orientation = "ne";
+            currImage.orientation = "NE";
 		}
 		if(ui->dirButtons->checkedButton() == ui->W){
-			currImage.orientation = "w";
+            currImage.orientation = "W";
 		}
 		if(ui->dirButtons->checkedButton() == ui->E){
-			currImage.orientation = "e";
+            currImage.orientation = "E";
 		}
 		if(ui->dirButtons->checkedButton() == ui->SW){
-			currImage.orientation = "sw";
+            currImage.orientation = "SW";
 		}
 		if(ui->dirButtons->checkedButton() == ui->S){
-			currImage.orientation = "s";
+            currImage.orientation = "S";
 		}
 		if(ui->dirButtons->checkedButton() == ui->SE){
-			currImage.orientation = "se";
+            currImage.orientation = "SE";
 		}
     }
 
