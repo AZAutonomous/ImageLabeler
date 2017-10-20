@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>895</width>
-    <height>821</height>
+    <height>834</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -130,32 +130,6 @@ background-color: white;
        </property>
        <layout class="QVBoxLayout" name="verticalLayout_3">
         <item>
-         <widget class="QLabel" name="imageFilepath">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>10</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
-           </font>
-          </property>
-          <property name="text">
-           <string>Some text here</string>
-          </property>
-          <property name="textFormat">
-           <enum>Qt::PlainText</enum>
-          </property>
-          <property name="alignment">
-           <set>Qt::AlignCenter</set>
-          </property>
-         </widget>
-        </item>
-        <item>
          <widget class="QLabel" name="image">
           <property name="sizePolicy">
            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
@@ -228,7 +202,7 @@ background-color: white;
         <string notr="true">selection-background-color: rgb(252, 0, 6);</string>
        </property>
        <property name="text">
-        <string>Not a Target</string>
+        <string>False Flag</string>
        </property>
        <property name="iconSize">
         <size>
@@ -3609,6 +3583,39 @@ border: 1px solid white;
         </item>
        </layout>
       </widget>
+      <widget class="QLabel" name="imageFilepath">
+       <property name="geometry">
+        <rect>
+         <x>-10</x>
+         <y>790</y>
+         <width>853</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+         <weight>75</weight>
+         <italic>false</italic>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Console</string>
+       </property>
+       <property name="textFormat">
+        <enum>Qt::PlainText</enum>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
      </widget>
     </item>
    </layout>
@@ -3618,10 +3625,10 @@ border: 1px solid white;
  <resources/>
  <connections/>
  <buttongroups>
-  <buttongroup name="colorButtons"/>
-  <buttongroup name="letterColorButtons"/>
   <buttongroup name="dirButtons"/>
+  <buttongroup name="colorButtons"/>
   <buttongroup name="letterButtons"/>
+  <buttongroup name="letterColorButtons"/>
   <buttongroup name="shapeButtons"/>
  </buttongroups>
 </ui>

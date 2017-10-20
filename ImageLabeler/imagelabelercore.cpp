@@ -14,6 +14,7 @@
 
 class ImageData;
 
+// ImageLabeler Constructor
 ImageLabeler::ImageLabeler(int argc, char **argv) :
 	app(new QApplication(argc, argv)),
 	gui(new ImageLabelerGUI(this)),
@@ -26,6 +27,7 @@ ImageLabeler::ImageLabeler(int argc, char **argv) :
 #endif
 }
 
+// ImageLabeler Destructor
 ImageLabeler::~ImageLabeler()
 {
 	delete gui;
@@ -33,9 +35,8 @@ ImageLabeler::~ImageLabeler()
 	delete app;
 }
 
-
+// Runs the ImageLabeler (initializes window)
 int ImageLabeler::run()
-
 {
 	gui->show();
 
@@ -50,6 +51,8 @@ int ImageLabeler::run()
 	return app->exec();
 }
 
+// Loads the next Image to the Window
+// Returns true if successful, false if no next image
 bool ImageLabeler::loadNext()
 {
 	QString filepath = "";
@@ -79,7 +82,7 @@ bool ImageLabeler::loadNext()
 	}
 }
 
-
+// Changes the Root Directory to a given string
 void ImageLabeler::setRootDirectory(QString dir)
 {
 	// Validate directory
@@ -107,6 +110,7 @@ void ImageLabeler::setRootDirectory(QString dir)
 #endif // DEBUG
 }
 
+// Changes the image format to a given string
 void ImageLabeler::setImageFormat(QString format)
 {
 	// Validate input
@@ -122,6 +126,7 @@ void ImageLabeler::setImageFormat(QString format)
     loadIter();
 }
 
+
 void ImageLabeler::loadIter()
 {
 	if (dirIter != nullptr)
@@ -129,6 +134,7 @@ void ImageLabeler::loadIter()
 	dirIter = new WrappingQDirIterator(rootDirectory.absolutePath(), QStringList() << "*." + imageFormat, QDir::Files, QDirIterator::NoIteratorFlags);
 }
 
+// Move Current Image to given Subdirectory String
 void ImageLabeler::moveToSubdir(QString subdir){ //move process images to seperate directory and rename to correspond with its JSON
 	// Validate subdir
 	if (!subdir.isEmpty() && subdir.right(1) != "/") {
@@ -172,6 +178,7 @@ QString ImageLabeler::createSubdir(const QString &subdir_root, const QString &fi
 	return subdir;
 }
 
+// Outputs the current image data to JSON
 void ImageLabeler::saveData(ImageData currImage, QString subdir) //outputs data to file in JSON format
 {
 	// Validate subdir
@@ -207,6 +214,7 @@ void ImageLabeler::saveData(ImageData currImage, QString subdir) //outputs data 
     }
 }
 
+// Get the name of the current image
 QString ImageLabeler::getCurrFilename() {
 	return dirIter->fileName();
 }

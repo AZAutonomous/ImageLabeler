@@ -51,18 +51,22 @@
 #include <QtWidgets>
 
 #include "flowlayout.h"
+
+// Constructor
 FlowLayout::FlowLayout(QWidget *parent, int margin, int hSpacing, int vSpacing)
 	: QLayout(parent), m_hSpace(hSpacing), m_vSpace(vSpacing)
 {
 	setContentsMargins(margin, margin, margin, margin);
 }
 
+// Constructor
 FlowLayout::FlowLayout(int margin, int hSpacing, int vSpacing)
 	: m_hSpace(hSpacing), m_vSpace(vSpacing)
 {
 	setContentsMargins(margin, margin, margin, margin);
 }
 
+// Deconstructor
 FlowLayout::~FlowLayout()
 {
 	QLayoutItem *item;
@@ -70,11 +74,13 @@ FlowLayout::~FlowLayout()
 		delete item;
 }
 
+// Add given item to the Layout
 void FlowLayout::addItem(QLayoutItem *item)
 {
 	itemList.append(item);
 }
 
+//
 int FlowLayout::horizontalSpacing() const
 {
 	if (m_hSpace >= 0) {
@@ -84,6 +90,7 @@ int FlowLayout::horizontalSpacing() const
 	}
 }
 
+//
 int FlowLayout::verticalSpacing() const
 {
 	if (m_vSpace >= 0) {
@@ -93,16 +100,19 @@ int FlowLayout::verticalSpacing() const
 	}
 }
 
+// Return number of items in Layout
 int FlowLayout::count() const
 {
 	return itemList.size();
 }
 
+// Returns the item at a given index
 QLayoutItem *FlowLayout::itemAt(int index) const
 {
 	return itemList.value(index);
 }
 
+// Returns and removes the item at a given index
 QLayoutItem *FlowLayout::takeAt(int index)
 {
 	if (index >= 0 && index < itemList.size())

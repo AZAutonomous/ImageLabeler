@@ -8,6 +8,7 @@
 
 class ImageData;
 
+// Constructor
 ImageLabelerGUI::ImageLabelerGUI(ImageLabeler *core, QMainWindow *parent) :
     QMainWindow(parent),
 	ui(new Ui::ImageLabelerGUI),
@@ -20,25 +21,31 @@ ImageLabelerGUI::ImageLabelerGUI(ImageLabeler *core, QMainWindow *parent) :
 	ui->image->setScaledContents(true);
 }
 
+// Deconstructor
 ImageLabelerGUI::~ImageLabelerGUI()
 {
     delete ui;
 }
 
+// Changes Root Directory to given String
 void ImageLabelerGUI::setRootDirectory(const QString &str)
 {
 	ui->rootDirField->setText(str);
 }
+
+// Changes Image Format to given String
 void ImageLabelerGUI::setImageFormat(const QString &str)
 {
     ui->imageFormatEdit->setText(str);
 }
 
+// Changes File Path to given String
 void ImageLabelerGUI::setFilepath(const QString &str)
 {
 	ui->imageFilepath->setText(str);
 }
 
+// 'Opens' Image at given String Path
 void ImageLabelerGUI::setImage(const QString &str)
 {
 	image = QPixmap(str);
@@ -55,16 +62,20 @@ void ImageLabelerGUI::setImage(const QString &str)
 	}
 }
 
+// Set the Comment on current Image
 void ImageLabelerGUI::setComment(const QString &str)
 {
 	ui->imageComment->setText(str);
 }
 
+// Action for 'Skip Button' click
 void ImageLabelerGUI::on_skipButton_clicked()
 {
 	model->loadNext();
 }
 
+// Action for 'Save and Next' Click
+// TODO: Change to 'Submit Image'
 void ImageLabelerGUI::on_saveAndNextButton_clicked()
 {
 
@@ -91,18 +102,22 @@ void ImageLabelerGUI::on_saveAndNextButton_clicked()
 
 }
 
+// Action for 'Cancel Button' Click
+// NOTE: Acts as a 'quit/exit' button, relabel or remove
 void ImageLabelerGUI::on_cancelButton_clicked()
 {
 	close();
 }
 
+// Action for 'Set Directory' Click
 void ImageLabelerGUI::on_directoryButton_clicked()
 {
 	QString dirString = ui->rootDirField->text();
     model->setRootDirectory(dirString);
     model->loadNext();
-
 }
+
+// Action for 'Set Format' Click
 void ImageLabelerGUI::on_formatButton_clicked()
 {
     QString format = ui->imageFormatEdit->text();
@@ -110,7 +125,8 @@ void ImageLabelerGUI::on_formatButton_clicked()
     model->loadNext();
 }
 
-
+// Has an option for each field been selected?
+// Returns true if all fields selected, false otherwise
 bool ImageLabelerGUI::validate_buttons(ImageData currImage){
     if(currImage.shape.length() == 0 ||
        currImage.shapeColor.length() == 0 ||
@@ -123,6 +139,8 @@ bool ImageLabelerGUI::validate_buttons(ImageData currImage){
         return true;
     }
 }
+
+// Resets the image data fields
 void ImageLabelerGUI::resetButtons(){
     if(ui->shapeButtons->checkedButton() != NULL){
     ui->shapeButtons->setExclusive(false);
@@ -153,6 +171,8 @@ void ImageLabelerGUI::resetButtons(){
         ui->notTarget->setChecked(false);
     }
 }
+
+// Fills 'False Flag' Fields
 void ImageLabelerGUI::disableButtons(){ //special case for not a target button
     if(ui->shapeButtons->checkedButton() != NULL){
     ui->shapeButtons->setExclusive(false);
@@ -182,9 +202,12 @@ void ImageLabelerGUI::disableButtons(){ //special case for not a target button
 
 }
 
+// Action for 'Not Target Button' Click
+// TODO: Change to 'False Flag' Button
 void ImageLabelerGUI::on_notTarget_clicked()
 {
     disableButtons();
+    on_saveAndNextButton_clicked();
 }
 
 //check shapes toggled
