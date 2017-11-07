@@ -5,6 +5,9 @@
 #include <QDir>
 #include <QDirIterator>
 #include "imagelabelercore.h"
+#include <QFileDialog>
+#include <QMessageBox>
+
 
 namespace Ui {
 class ImageLabelerGUI;

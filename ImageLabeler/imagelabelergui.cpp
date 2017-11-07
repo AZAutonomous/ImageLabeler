@@ -112,10 +112,27 @@ void ImageLabelerGUI::on_cancelButton_clicked()
 // Action for 'Set Directory' Click
 void ImageLabelerGUI::on_directoryButton_clicked()
 {
-	QString dirString = ui->rootDirField->text();
+    //QString dirString = ui->rootDirField->text();
+    //model->setRootDirectory(dirString);
+    //model->loadNext();
+
+    QFileDialog myDialog(this);
+    myDialog.setFileMode(QFileDialog::Directory);
+    myDialog.setDirectory("C://");
+
+    QString dirString = QFileDialog::getExistingDirectory(
+                this,
+                tr("Select Image Directory"),
+                "C://"
+                );
+
+
+    QMessageBox::information(this, tr("File Name"), dirString);
     model->setRootDirectory(dirString);
     model->loadNext();
+
 }
+
 
 // Action for 'Set Format' Click
 void ImageLabelerGUI::on_formatButton_clicked()

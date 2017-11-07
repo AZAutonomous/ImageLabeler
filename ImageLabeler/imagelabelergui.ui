@@ -57,7 +57,7 @@ background-color: white;
         <rect>
          <x>10</x>
          <y>10</y>
-         <width>671</width>
+         <width>571</width>
          <height>20</height>
         </rect>
        </property>
@@ -71,10 +71,10 @@ background-color: white;
       <widget class="QPushButton" name="directoryButton">
        <property name="geometry">
         <rect>
-         <x>0</x>
-         <y>30</y>
-         <width>691</width>
-         <height>31</height>
+         <x>580</x>
+         <y>10</y>
+         <width>81</width>
+         <height>21</height>
         </rect>
        </property>
        <property name="text">
@@ -84,9 +84,9 @@ background-color: white;
       <widget class="QLineEdit" name="imageFormatEdit">
        <property name="geometry">
         <rect>
-         <x>700</x>
+         <x>660</x>
          <y>10</y>
-         <width>151</width>
+         <width>91</width>
          <height>20</height>
         </rect>
        </property>
@@ -94,10 +94,10 @@ background-color: white;
       <widget class="QPushButton" name="formatButton">
        <property name="geometry">
         <rect>
-         <x>690</x>
-         <y>30</y>
-         <width>171</width>
-         <height>32</height>
+         <x>750</x>
+         <y>10</y>
+         <width>111</width>
+         <height>21</height>
         </rect>
        </property>
        <property name="text">
@@ -107,10 +107,10 @@ background-color: white;
       <widget class="QFrame" name="imageBox">
        <property name="geometry">
         <rect>
-         <x>220</x>
-         <y>60</y>
-         <width>451</width>
-         <height>221</height>
+         <x>240</x>
+         <y>40</y>
+         <width>400</width>
+         <height>229</height>
         </rect>
        </property>
        <property name="sizePolicy">
@@ -172,8 +172,8 @@ background-color: white;
        </property>
        <property name="geometry">
         <rect>
-         <x>710</x>
-         <y>110</y>
+         <x>700</x>
+         <y>100</y>
          <width>131</width>
          <height>111</height>
         </rect>
@@ -3625,10 +3625,10 @@ border: 1px solid white;
  <resources/>
  <connections/>
  <buttongroups>
+  <buttongroup name="shapeButtons"/>
   <buttongroup name="dirButtons"/>
   <buttongroup name="colorButtons"/>
-  <buttongroup name="letterButtons"/>
   <buttongroup name="letterColorButtons"/>
-  <buttongroup name="shapeButtons"/>
+  <buttongroup name="letterButtons"/>
  </buttongroups>
 </ui>

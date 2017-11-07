@@ -38,8 +38,9 @@ ImageLabeler::~ImageLabeler()
 // Runs the ImageLabeler (initializes window)
 int ImageLabeler::run()
 {
-	gui->show();
-
+    //gui->show();
+    gui->showMaximized();
+    //gui->setWindowState(gui->windowState() ^ Qt::WindowFullScreen);
     QFile File("/Users/Isaac/Documents/AAV/ImageLabeler/ImageLabeler/stylesheet.qss");   //style sheet
     File.open(QFile::ReadOnly);
     QString StyleSheet = QLatin1String(File.readAll());
