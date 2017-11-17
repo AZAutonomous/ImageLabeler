@@ -127,7 +127,7 @@ void ImageLabelerGUI::on_directoryButton_clicked()
                 );
 
 
-    QMessageBox::information(this, tr("File Name"), dirString);
+    //QMessageBox::information(this, tr("File Name"), dirString);
     model->setRootDirectory(dirString);
     model->loadNext();
 
